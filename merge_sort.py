@@ -1,3 +1,8 @@
+#Merge Sort
+#Vít Ježek, III. ročník BGEKA
+#zimní semestr 2021/2022
+#Úvod do programování
+
 def merge_sort(arr):
     """
     merge sorting function
