@@ -12,7 +12,7 @@ Základem pro vyřešení zadání je aplikace permutací. Permutace je speciál
 Problém může nastat, pokud by uživatel chtěl vypsat slovo, které obsahuje i jiná písmena, než jsou obsaženy v anglické abecedě. Ošetření vstupu pomocí regulárního výrazu porovnává pouze velká a malá písmena anglické abecedy. Zbylé znaky nejsou respektovány. V případě potřeby by ale algoritmus mohl být upraven pomocí doplnění znaků, které by program považoval za správné.
 
 ## Vstupní data
-Vstupem do programu je string, který obsahuje uživatelem zvolené slovo. Slovo může obsahovat pouze malá a velká písmena. Nesmí obsahovat číslice, mezery ani jiné znaky.
+Vstupem do programu je string, který obsahuje uživatelem zvolené slovo. Slovo může obsahovat pouze malá a velká písmena anglické abecedy. Nesmí obsahovat číslice, mezery ani jiné znaky.
 
 ## Výstupní data
 Program vypíše do terminálu veškeré kombinace vybraného slova podle pravidel permutace.
