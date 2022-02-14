@@ -11,10 +11,10 @@ Merge Sort (Obr. 1) je třídící algoritmus vynalezený v roce 1945 Johnem von
 ## Popis algoritmu
 
 ## Problematické situace a jejich rozbor
-Hlavní problematickou situací bylo ošetření vstupů před zadáním nesmyslných hodnot. Je nutné, aby uživatel zadával pouze celá čísla. K tomu byla využita řetězcová metoda isnumeric. Ta vrací True, pokud řetězec obsahuje čísla. Po splnění této podmínky byly vstupní čísla převedena na integer. Tato metoda však není všespásná kvůli tomu, že funkce integer potřebuje pouze jeden konkrétní druh číslic, které se ve všech případech neshodují s isnumeric (Nauč se Python 2014). Pro účely tohoto programu ale považuji toto řešení za dostatečné.
+Hlavní problematickou situací bylo ošetření vstupů před zadáním nesmyslných hodnot. K ošetření zadání počtu prvků byla využita řetězcová metoda isnumeric. Ta vrací True, pokud řetězec obsahuje čísla. Po splnění této podmínky byly vstupní čísla převedena na integer. Tato metoda však není všespásná kvůli tomu, že funkce integer potřebuje pouze jeden konkrétní druh číslic, které se ve všech případech neshodují s isnumeric (Nauč se Python 2014). Pro účely tohoto programu ale považuji toto řešení za dostatečné. K ošetření zadání jednotlivých prvků do seznamu bylo využito zachycení chyby pomocí příkazu try/except. Díky tomu je umožněno zadávat reálná čísla.   
 
 ## Vstupní data
-Vstupem do programu je seznam libovolného počtu čísel. Podmínkou je, aby počet prvků v seznamu byl větší nebo rovný 2, a to kvůli možnosti porovnávání. A aby všechny prvky v seznamu byly celá čísla.
+Vstupem do programu je seznam libovolného počtu čísel. Podmínkou je, aby počet prvků v seznamu byl větší nebo rovný 2, a to kvůli možnosti porovnávání. A aby všechny prvky v seznamu byly reálná čísla.
 
 ## Výstupní data
 Program po provedení výpočtu vrátí seznam čísel o stejném rozsahu a se stejnými prvky. Prvky v seznamu ale budou seřazeny od nejmenšího čísla do největšího.
@@ -24,4 +24,5 @@ Program je částečně interaktivní, a to díky možnosti výběru prvků uži
 
 ## Zdroje
 Wikipedia (2022): Merge Sort. https://en.wikipedia.org/wiki/Merge_sort (cit. 8. 2. 2022)
+
 Nauč se Python (2014): Výjimky. https://naucse.python.cz/lessons/beginners/exceptions/ (cit. 8. 2. 2022)
