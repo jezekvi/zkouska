@@ -72,7 +72,7 @@ Merge Sort (Obr. 1) je třídící algoritmus vynalezený v roce 1945 Johnem von
 
 	funkce program
 		do proměnné list zavolej funkci load_data
-		zavolej funkci se vstupem list
+		zavolej funkci merge_sort se vstupem list
 		vytiskni list
 
 	pokud se jméno bude rovnat 'main'
