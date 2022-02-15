@@ -8,32 +8,32 @@ Základem pro vyřešení zadání je aplikace permutací. Permutace je speciál
 
 ## Popis algoritmu
     funkce permutation s parametry str a tmp (tmp je prázdný)
-      když bude počet znaků v parametru str rovný 0
-        vytiskni hodnoty z parametru tmp
+        když bude počet znaků v parametru str rovný 0
+            vytiskni hodnoty z parametru tmp
 
-      započni cyklus v rozmezí počtu znaků v parametru str (všechna písmena v zadaném slově)
-        do proměnné ch ulož písmeno ze dananého slova na pozici hodnoty i
-        do proměnné left_part ulož všechna písmena nalevo od písmena v proměnné ch
-        do proměnné right_part ulož všechna písmena napravo od písmena v proměnné ch
-        zavolej funkci permutation a do parametru str vlož spojení left_part a right part a do parametru tmp vlož spojení tmp a ch)
+        započni cyklus v rozmezí počtu znaků v parametru str (všechna písmena v zadaném slově)
+            do proměnné ch ulož písmeno ze dananého slova na pozici hodnoty i
+            do proměnné left_part ulož všechna písmena nalevo od písmena v proměnné ch
+            do proměnné right_part ulož všechna písmena napravo od písmena v proměnné ch
+            zavolej funkci permutation a do parametru str vlož spojení left_part a right part a do parametru tmp vlož spojení tmp a ch)
 
     funkce load_data
-      započni cyklu
-        zadej word dokud nebude platit podmínka
+        započni cyklu
+            zadej word dokud nebude platit podmínka
 
-        když nebude word validováno (nebude obsahovat pouze malá a velká písmena EN abecedy)
-          vytiskni: "Not a word, try again"
-          a pokračuj zpět k zadávání slova
-        po splnění ukonči
-      a vrať slovo 
+            když nebude word validováno (nebude obsahovat pouze malá a velká písmena EN abecedy)
+                vytiskni: "Not a word, try again"
+                a pokračuj zpět k zadávání slova
+                po splnění ukonči
+        a vrať slovo 
 
 
     funkce program
-      do proměnné word zavolej funkci load_data
-      zavolej funkci permutation se vstupem word
+        do proměnné word zavolej funkci load_data
+        zavolej funkci permutation se vstupem word
 
     pokud se jméno bude rovnat 'main'
-      zavolej funkci program
+        zavolej funkci program
 
 Funkce funguje na principu rekurze. Rekurze se zanořuje až do té doby, kdy parametr str neobsahuje žádné hodnoty. V tu chvíli program vypíše hodnoty v tmp, která v tu chvíli obsahuje všechna písmena ze zvoleného slova. Rekurze postupně projde všechny kombinace až do chvíle, kdy se naplní for cyklus (všechna písmena ve slově byla použita jako písmeno počáteční).
 
