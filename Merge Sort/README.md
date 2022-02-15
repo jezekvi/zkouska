@@ -10,8 +10,7 @@ Merge Sort (Obr. 1) je třídící algoritmus vynalezený v roce 1945 Johnem von
 
 ## Popis algoritmu
 	funkce merge_sort s parametrem arr
-
-	  když počet znaků parametru arr bude větší než jedna
+		když počet znaků parametru arr bude větší než jedna
 			ulož levou polovinu znaků parametru arr do proměnné left_arr
 			ulož pravou polovinu znaků parametru arr do proměnné right_arr
 
@@ -42,7 +41,6 @@ Merge Sort (Obr. 1) je třídící algoritmus vynalezený v roce 1945 Johnem von
 				a k proměnné k přičti 1
 
 	funkce load_data
-
 		založ prázdný seznam
 
 		započni cyklus
@@ -73,7 +71,6 @@ Merge Sort (Obr. 1) je třídící algoritmus vynalezený v roce 1945 Johnem von
 		po dokončení cyklu vrať list
 
 	funkce program
-
 		do proměnné list zavolej funkci load_data
 		zavolej funkci se vstupem list
 		vytiskni list
