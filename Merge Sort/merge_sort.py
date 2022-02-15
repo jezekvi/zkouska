@@ -28,8 +28,8 @@ def merge_sort(arr):
 
         #merge
         i = 0 #left_arr index
-        j = 0 # right arr index
-        k = 0 # merged arr index
+        j = 0 # right_arr index
+        k = 0 # merged_arr index
  
         #merging until finish one of the parts
         while i < len(left_arr) and j < len(right_arr):
