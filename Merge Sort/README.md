@@ -9,77 +9,77 @@ Merge Sort (Obr. 1) je třídící algoritmus vynalezený v roce 1945 Johnem von
 ![merge](https://user-images.githubusercontent.com/93740236/153936187-31f1be9d-11d3-4ba7-abfc-782754ed51c6.jpg)
 
 ## Popis algoritmu
-funkce merge_sort s parametrem arr
+	funkce merge_sort s parametrem arr
 
-  když počet znaků parametru arr bude větší než jedna
-		ulož levou polovinu znaků parametru arr do proměnné left_arr
-		ulož pravou polovinu znaků parametru arr do proměnné right_arr
+	  když počet znaků parametru arr bude větší než jedna
+			ulož levou polovinu znaků parametru arr do proměnné left_arr
+			ulož pravou polovinu znaků parametru arr do proměnné right_arr
 
-		začni s rekurzí zavoláním funkce merge_sort se vstupem left_arr
-		začni s rekurzí zavoláním funkce merge_sort se vstupem right_arr
+			začni s rekurzí zavoláním funkce merge_sort se vstupem left_arr
+			začni s rekurzí zavoláním funkce merge_sort se vstupem right_arr
 
-		vytvoř proměnnou i s hodnotou nula (jako left_arr index)
-		vytvoř proměnnou j s hodnotou nula (jako right_arr index)	
-		vytvoř proměnnou k s hodnotou nula (jako merged_arr index)
+			vytvoř proměnnou i s hodnotou nula (jako left_arr index)
+			vytvoř proměnnou j s hodnotou nula (jako right_arr index)	
+			vytvoř proměnnou k s hodnotou nula (jako merged_arr index)
 
-		dokud hodnota v proměnné i nebude menší než je počet znaků v left_arr a hodnota v proměnné j nebude menší než je počet znaků v right_arr
-			tak když hodnota na pozici left_arr určena pomocí proměnné i bude menší než hodnota na pozici right_arr určena pomocí proměnné j
+			dokud hodnota v proměnné i nebude menší než je počet znaků v left_arr a hodnota v proměnné j nebude menší než je počet znaků v right_arr
+				tak když hodnota na pozici left_arr určena pomocí proměnné i bude menší než hodnota na pozici right_arr určena pomocí proměnné j
+					přiřad do seznamu arr na pozici s hodnotou proměnné k hodnotu left_arr na pozici hodnoty proměnné i
+					a k proměnné i přičti 1
+				nebo
+					přiřad do seznamu arr na pozici s hodnotou proměnné k hodnotu right_arr na pozici hodnoty proměnné j
+					a k proměnné j přičti 1
+				nakonec k proměnné k přičti 1
+
+			dokud hodnota proměnné i nebude menší než je počet znaků v left_arr 
 				přiřad do seznamu arr na pozici s hodnotou proměnné k hodnotu left_arr na pozici hodnoty proměnné i
 				a k proměnné i přičti 1
-			nebo
+				a k proměnné k přičti 1
+
+			dokud hodnota proměnné j nebude menší než je počet znaků v right_arr 
 				přiřad do seznamu arr na pozici s hodnotou proměnné k hodnotu right_arr na pozici hodnoty proměnné j
-				a k proměnné j přičti 1
-			nakonec k proměnné k přičti 1
+				a k proměnné i přičti 1
+				a k proměnné k přičti 1
 
-		dokud hodnota proměnné i nebude menší než je počet znaků v left_arr 
-			přiřad do seznamu arr na pozici s hodnotou proměnné k hodnotu left_arr na pozici hodnoty proměnné i
-			a k proměnné i přičti 1
-			a k proměnné k přičti 1
+	funkce load_data
 
-		dokud hodnota proměnné j nebude menší než je počet znaků v right_arr 
-			přiřad do seznamu arr na pozici s hodnotou proměnné k hodnotu right_arr na pozici hodnoty proměnné j
-			a k proměnné i přičti 1
-			a k proměnné k přičti 1
+		založ prázdný seznam
 
-funkce load_data
+		započni cyklus
+			zadej počet elementů do proměnné n, dokud nebude platit podmínka
 
-	založ prázdný seznam
-	
-	započni cyklus
-		zadej počet elementů do proměnné n, dokud nebude platit podmínka
-
-		když n není numerický znak
-			vytiskni: "Not number, try again"
-			a pokračuj zpět k zadávání elementů
-
-		převeď proměnnou n na integer
-
-		když bude n menší než 2
-			vytiskni: "Try again and enter positive integer larger than 2"
-		v opačném případě
-			ukonči cyklus
-	
-	započni cyklus v rozmezí od 0 do n
-		dokud bude platit
-			zadej číslo do proměnné ele
-		
-			zachyť případnou výjimku
-				převeď proměnnou ele na float
-				ukonči
-			pokud nastane: ValueError
+			když n není numerický znak
 				vytiskni: "Not number, try again"
+				a pokračuj zpět k zadávání elementů
 
-		připoj zadanou hodnotu do seznamu
-	po dokončení cyklu vrať list
-			
-funkce program
+			převeď proměnnou n na integer
 
-	do proměnné list zavolej funkci load_data
-	zavolej funkci se vstupem list
-	vytiskni list
+			když bude n menší než 2
+				vytiskni: "Try again and enter positive integer larger than 2"
+			v opačném případě
+				ukonči cyklus
 
-pokud se jméno bude rovnat 'main'
-	zavolej funkci program	
+		započni cyklus v rozmezí od 0 do n
+			dokud bude platit
+				zadej číslo do proměnné ele
+
+				zachyť případnou výjimku
+					převeď proměnnou ele na float
+					ukonči
+				pokud nastane: ValueError
+					vytiskni: "Not number, try again"
+
+			připoj zadanou hodnotu do seznamu
+		po dokončení cyklu vrať list
+
+	funkce program
+
+		do proměnné list zavolej funkci load_data
+		zavolej funkci se vstupem list
+		vytiskni list
+
+	pokud se jméno bude rovnat 'main'
+		zavolej funkci program	
 
 Rekurze ve funkci merge_sort probíhá nejřívé na levé straně seznamu, tedy left_arr, a to přes uplné rozdělení až na úplné seřazení. Totéž se následně provede i na pravé straně, tedy right_arr. Na závěr je levá i pravá strana seznamu setříděna do jednoho finálního a tím je seřazení ukončeno.
 
