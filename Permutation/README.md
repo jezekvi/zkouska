@@ -12,13 +12,13 @@ Základem pro vyřešení zadání je aplikace permutací. Permutace je speciál
             vytiskni hodnoty z parametru tmp
 
         započni cyklus v rozmezí počtu znaků v parametru str (všechna písmena v zadaném slově)
-            do proměnné ch ulož písmeno ze dananého slova na pozici hodnoty i
+            do proměnné ch ulož písmeno ze zananého slova na pozici hodnoty i
             do proměnné left_part ulož všechna písmena nalevo od písmena v proměnné ch
             do proměnné right_part ulož všechna písmena napravo od písmena v proměnné ch
-            zavolej funkci permutation a do parametru str vlož spojení left_part a right part a do parametru tmp vlož spojení tmp a ch)
+            zavolej funkci permutation a do parametru str vlož spojení left_part a right part a do parametru tmp vlož spojení tmp a ch
 
     funkce load_data
-        započni cyklu
+        započni cyklus
             zadej word dokud nebude platit podmínka
 
             když nebude word validováno (nebude obsahovat pouze malá a velká písmena EN abecedy)
@@ -49,5 +49,5 @@ Program vypíše do terminálu veškeré kombinace vybraného slova podle pravid
 ## Závěr
 Program je částečně interaktivní, a to díky možnosti výběru slova uživatelem. Program by mohl fungovat s libovolnými hodnotami, ale pro splnění zadání byl vstup ošetřen tak, aby mohl obsahovat pouze písmena anglické abecedy.
 
-# Zdroje
+## Zdroje
 MatWeb (2021): Permutace. https://www.matweb.cz/permutace/ (cit. 8. 2. 2022)
