@@ -10,24 +10,24 @@ Merge Sort (Obr. 1) je třídící algoritmus vynalezený v roce 1945 Johnem von
 
 ## Popis algoritmu
 ### Algoritmus MergeSort
-Vstup: Posloupnost a[0], ..., a[n] k setřídění
-		Pokud |a| > 1
-		     x = MergeSort(levá polovina a)
-		     y = MergeSort(pravá polovina a)
-		     b = Merge(x, y)
-Výstup: Setříděná posloupnost b[0], ..., b[n]
+	Vstup: Posloupnost a[0], ..., a[n] k setřídění
+	Pokud |a| > 1
+	     x = MergeSort(levá polovina a)
+	     y = MergeSort(pravá polovina a)
+	     b = Merge(x, y)
+	Výstup: Setříděná posloupnost b[0], ..., b[n]
 
 ### Procedura Merge
-Vstup: Posloupnosti x a y
-		    i = 0
-		    j = 0
-		    k = 0
-		    Dokud nedojdeme na konec obou posloupností
-			b[k] = menší z x[i], y[j]
-			k = k + 1
-			výše vybrané i nebo j zvětšíme o 1 
-Výstup: Posloupnost vzniklá spojením posloupností x a y
-
+	Vstup: Posloupnosti x a y
+	    i = 0
+	    j = 0
+	    k = 0
+	    Dokud nedojdeme na konec obou posloupností
+		b[k] = menší z x[i], y[j]
+		k = k + 1
+		výše vybrané i nebo j zvětšíme o 1 
+	Výstup: Posloupnost vzniklá spojením posloupností x a y
+	
 Rekurze ve funkci merge_sort probíhá nejřívé na levé polovině seznamu a následně i na pravé polovině. Na závěr je levá i pravá strana seznamu setříděna do jednoho finálního a tím je seřazení ukončeno.
 
 ## Problematické situace a jejich rozbor
