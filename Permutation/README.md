@@ -17,6 +17,8 @@ Základem pro vyřešení zadání je aplikace permutací. Permutace je speciál
             y = pravá strana od ch	
             permutation(x+y, P + ch)
         Výstup: všechny permutace původního stringu
+        
+Funkce funguje na principu rekurze. Rekurze se zanořuje až do té doby, kdy parametr str neobsahuje žádné hodnoty. V tu chvíli program vypíše hodnoty v tmp, která obsahuje všechna písmena ze zvoleného slova a vrací se zpět o jednu úroveň rekurze.
 
 ## Problematické situace a jejich rozbor
 Problém může nastat, pokud by uživatel chtěl vypsat slovo, které obsahuje i jiná písmena, než jsou obsaženy v anglické abecedě. Ošetření vstupu pomocí regulárního výrazu porovnává pouze velká a malá písmena anglické abecedy. Zbylé znaky nejsou respektovány. V případě potřeby by ale algoritmus mohl být upraven pomocí doplnění znaků, které by program považoval za správné.
